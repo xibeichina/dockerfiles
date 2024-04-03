@@ -6,7 +6,6 @@ RUN set -ex \
     && apt-get install -y --no-install-recommends \
     && docker-php-ext-install -j$(nproc) bcmath \
     && apt-get clean \
-    && ls \
     && rm -rf /var/lib/apt/lists/*
 
 
