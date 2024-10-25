@@ -1,5 +1,5 @@
 # 使用官方PHP 7.3 FPM镜像作为基础镜像
-FROM php:7.3.33-fpm-alpine3.14
+FROM php:7.3.33-fpm
 
 # 设置环境变量，避免交互式安装
 ENV DEBIAN_FRONTEND=noninteractive
