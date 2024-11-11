@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
         --with-freetype-dir=/usr/include/ \
         --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd iconv pdo pdo_mysql opcache mbstring mysqli bcmath zip \
-    && pecl install redis \
+    && pecl install redis-5.3.7 \
     && docker-php-ext-enable redis \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
