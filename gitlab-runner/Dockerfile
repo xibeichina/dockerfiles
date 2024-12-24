@@ -1,0 +1,1 @@
+FROM gitlab/gitlab-runner:v15.4.0
