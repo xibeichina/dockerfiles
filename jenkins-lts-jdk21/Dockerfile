@@ -1,5 +1,7 @@
 FROM jenkins/jenkins:lts-jdk21
 
+USER root
+
 RUN mkdir -p /var/jenkins_home/.m2 && \
     cat > /var/jenkins_home/.m2/settings.xml <<'EOF' && \
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
@@ -67,3 +69,6 @@ RUN mkdir -p /var/jenkins_home/.m2 && \
 
 </settings>
 EOF
+    chown -R jenkins:jenkins /var/jenkins_home/.m2
+
+USER jenkins
